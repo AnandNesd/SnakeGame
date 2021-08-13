@@ -1,7 +1,11 @@
 #myCanvas {
   background-color: grey;
 }
-body {
+#body {
   display: flex;
   justify-content: center;
+}
+
+#copyright {
+  display: flex;
 }

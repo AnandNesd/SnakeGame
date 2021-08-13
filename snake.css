@@ -1,16 +1,132 @@
+@font-face {
+  font-family: "Quantum";
+  src: url(Quantum.otf) format("truetype");
+}
+
 #background {
-    background-color: greenyellow;
-    display: flex;
-    justify-content: center;
-    padding-top: 30%;
+  font-family: "Quantum";
+  background-image: url("snake.jpg");
+  height: 90vh;
+  width: 90vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #8fac02;
 }
 
-#playButton{
-    height: 50px;
-    width: 100px;
-    font-size: 30px;
+#playButtonDiv {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+#playButton {
+  font-family: "Quantum";
+  color: black;
+  height: 50px;
+  width: 100px;
+  font-size: 30px;
+}
 
+#copyright {
+  color: whitesmoke;
+  font-size: x-large;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+}
 
+#nestlogo {
+  display: flex;
+  position: absolute;
+  top: 5;
+  left: 5;
+}
 
+@keyframes holox-fed {
+  0% {
+    box-shadow: 0 0 13px rgba(17, 241, 255, 0.6) inset;
+  }
+  50% {
+    box-shadow: 0 0 14px rgba(17, 241, 255, 1) inset;
+  }
+  100% {
+    box-shadow: 0 0 13px rgba(17, 241, 255, 0.6) inset;
+  }
+}
+
+.holo-btn {
+  color: #fff;
+  font: normal 60px Electrolize, "Quantum", Tahoma, sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+  height: 60px;
+  transition: all 330ms linear;
+  perspective: 260px;
+}
+
+.holo-btn:hover {
+  color: #fff;
+  text-rendering: optimizeLegibility;
+}
+
+.holo-btn:hover .top {
+  margin-top: -55px;
+  animation: none;
+  box-shadow: none;
+}
+
+.holo-btn:hover .bottom {
+  margin-top: -47px;
+}
+
+.holo-btn:active .skew {
+  animation: none;
+  box-shadow: 0 0 22px rgba(102, 102, 102, 0.6) inset;
+}
+
+.holo-btn:active {
+  transform: skew(-45deg);
+  border: 1px solid transparent;
+  border-right-width: 2px;
+  border-image: linear-gradient(top left, #bbb 0%, #999 100%) 1;
+  animation: holox-pen 5.4s ease 1s infinite;
+  padding: 24px;
+  display: block;
+  transition: all 330ms linear;
+  box-shadow: 0 0 13px rgba(102, 102, 102, 0.6) inset;
+}
+
+.skew {
+  transform: skew(-45deg);
+  border: 1px solid transparent;
+  border-right-width: 2px;
+  border-image: linear-gradient(top left, #bbb 0%, #999 100%) 1;
+  animation: holox-pen 5.4s ease 1s infinite;
+  padding: 24px;
+  display: block;
+  transition: all 330ms linear;
+  box-shadow: 0 0 13px rgba(102, 102, 102, 0.6) inset;
+}
+
+.cta {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+.top {
+  margin-top: -60px;
+}
+
+.bottom {
+  margin-top: -42px;
+}
