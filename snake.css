@@ -1,0 +1,16 @@
+#background {
+    background-color: greenyellow;
+    display: flex;
+    justify-content: center;
+    padding-top: 30%;
+}
+
+#playButton{
+    height: 50px;
+    width: 100px;
+    font-size: 30px;
+}
+
+
+
+
