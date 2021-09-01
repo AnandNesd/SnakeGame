@@ -3,24 +3,28 @@
   src: url(Quantum.otf) format("truetype");
 }
 
+body {
+  margin: 0;
+}
+
 #background {
   font-family: "Quantum";
   background-image: url("snake.jpg");
-  height: 90vh;
-  width: 90vw;
+  height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   background-color: #8fac02;
+  position: relative;
 }
 
 #playButtonDiv {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 0;
+  left: 20%;
   right: 0;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
@@ -30,24 +34,26 @@
   height: 50px;
   width: 100px;
   font-size: 30px;
+  cursor: pointer;
 }
 
 #copyright {
-  color: whitesmoke;
+  color: black;
   font-size: x-large;
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  top: 15%;
+  left: 20%;
+  bottom: 15%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  margin-top: 5%;
 }
 
 #nestlogo {
   display: flex;
   position: absolute;
-  top: 5;
-  left: 5;
+  top: 5%;
+  left: 20%;
 }
 
 @keyframes holox-fed {
@@ -62,71 +68,81 @@
   }
 }
 
-.holo-btn {
+.fifth {
+  box-shadow: 8px 8px 20px 10px rgb(255, 255, 255);
+  font-family: Quantum;
+  border-color: black;
+  border-radius: 0;
+  color: black;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  -webkit-transition: color 150ms ease-in-out;
+  transition: color 150ms ease-in-out;
+  height: 80px;
+  width: 200px;
+  font-size: xx-large;
+  /* justify-content: center; */
+  align-items: center;
+  /* left: 100%; */
+  margin-top: 10%;
+  border-radius: 5%;
+  background-color: transparent;
+  cursor: pointer;
+}
+.fifth:after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 0;
+  height: 100%;
+  background: black;
+  z-index: -1;
+  -webkit-transition: width 150ms ease-in-out;
+  transition: width 150ms ease-in-out;
+}
+.fifth:hover {
   color: #fff;
-  font: normal 60px Electrolize, "Quantum", Tahoma, sans-serif;
-  text-decoration: none;
-  text-transform: uppercase;
-  display: block;
-  height: 60px;
-  transition: all 330ms linear;
-  perspective: 260px;
+}
+.fifth:hover:after {
+  width: 100%;
 }
 
-.holo-btn:hover {
-  color: #fff;
-  text-rendering: optimizeLegibility;
+#tovch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.holo-btn:hover .top {
-  margin-top: -55px;
-  animation: none;
-  box-shadow: none;
+#names {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.holo-btn:hover .bottom {
-  margin-top: -47px;
+#grid {
+  display: grid;
+  /* grid-template-columns: repeat(3, 1fr); */
+  /* gap: 10px;
+  grid-auto-rows: minmax(100px, auto); */
 }
 
-.holo-btn:active .skew {
-  animation: none;
-  box-shadow: 0 0 22px rgba(102, 102, 102, 0.6) inset;
+#title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.holo-btn:active {
-  transform: skew(-45deg);
-  border: 1px solid transparent;
-  border-right-width: 2px;
-  border-image: linear-gradient(top left, #bbb 0%, #999 100%) 1;
-  animation: holox-pen 5.4s ease 1s infinite;
-  padding: 24px;
-  display: block;
-  transition: all 330ms linear;
-  box-shadow: 0 0 13px rgba(102, 102, 102, 0.6) inset;
+#snakeTitle {
+  margin: 0;
+  margin-top: 0%;
 }
 
-.skew {
-  transform: skew(-45deg);
-  border: 1px solid transparent;
-  border-right-width: 2px;
-  border-image: linear-gradient(top left, #bbb 0%, #999 100%) 1;
-  animation: holox-pen 5.4s ease 1s infinite;
-  padding: 24px;
-  display: block;
-  transition: all 330ms linear;
-  box-shadow: 0 0 13px rgba(102, 102, 102, 0.6) inset;
-}
-
-.cta {
-  padding-top: 150px;
-  padding-bottom: 150px;
-  padding-left: 150px;
-  padding-right: 150px;
-}
-.top {
-  margin-top: -60px;
-}
-
-.bottom {
-  margin-top: -42px;
+#developTitle {
+  margin: 0;
+  margin-top: 2%;
 }
